@@ -24,10 +24,10 @@ var formatTime = function (time) {
    var hour, minute, a, date = new Date(time);
 
    hour = date.getHours();
+   hour = (hour > 12) ? hour - 12 : hour;
    minute = date.getMinutes();
    minute = (minute >= 10) ? minute : '0' + minute;
    a = (hour < 12) ? 'am' : 'pm';
-   hour = (hour > 12) ? hour - 12 : hour;
 
    return hour + ':' + minute + ' ' + a;
 };
