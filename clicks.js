@@ -86,7 +86,7 @@ var initialize = function () {
 };
 
 
-// Main application: added a reset button for testing purposes
+// Main application
 window.onload = function () {
    initialize();
 
