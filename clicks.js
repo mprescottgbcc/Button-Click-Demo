@@ -24,10 +24,11 @@ var formatTime = function (time) {
    var hour, minute, a, date = new Date(time);
 
    hour = date.getHours();
-   hour = (hour > 12) ? hour - 12 : hour;
    minute = date.getMinutes();
    minute = (minute >= 10) ? minute : '0' + minute;
    a = (hour < 12) ? 'am' : 'pm';
+   hour = (hour > 12) ? hour - 12 : hour;
+   
 
    return hour + ':' + minute + ' ' + a;
 };
@@ -41,7 +42,9 @@ var updateClickCount = function (count) {
 var updateClickTime = function (time) {
    clickTime = time;
    localStorage.setItem('clickTime', clickTime);
-   clickTimeSpan.innerHTML = (time === -1) ? 'never' : 'at ' + formatTime(time);
+   clickTimeSpan.innerHTML = (time === -1)
+      ? 'never'
+      : 'at ' + formatTime(time);
 };
 
 var updateElapsed = function (minutes) {
