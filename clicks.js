@@ -28,7 +28,6 @@ var formatTime = function (time) {
    minute = (minute >= 10) ? minute : '0' + minute;
    a = (hour < 12) ? 'am' : 'pm';
    hour = (hour > 12) ? hour - 12 : hour;
-   
 
    return hour + ':' + minute + ' ' + a;
 };
